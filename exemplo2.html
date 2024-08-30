@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Sexo</title>
+</head>
+<body>
+    <h1>Verificar Sexo</h1>
+
+    <label for="sexo">Informe o sexo (M/F):</label>
+    <input type="text" id="sexo" placeholder="Digite M ou F">
+    <button onclick="verificarSexo()">Verificar</button>
+
+    <h2 id="resultado"></h2>
+
+    <script>
+        function verificarSexo() {
+            // Obter o valor do sexo informado pelo usuário
+            const sexo = document.getElementById('sexo').value.toUpperCase();
+
+            // Verificar se o sexo é 'M' ou 'F'
+            if (sexo === 'M') {
+                document.getElementById('resultado').textContent = "Sexo Masculino";
+            } else if (sexo === 'F') {
+                document.getElementById('resultado').textContent = "Sexo Feminino";
+            } else {
+                document.getElementById('resultado').textContent = "Sexo inválido!";
+            }
+        }
+    </script>
+</body>
+</html>
